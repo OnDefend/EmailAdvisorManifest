@@ -6,15 +6,15 @@
         xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" 
         xsi:type="MailApp">
         
-  <Id>2dce04f9-5f38-4dcb-8340-588f0ec2336e</Id>
+  <Id>77fda4fa-2756-4f50-aa77-88ecf8e54c8b</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Ondefend</ProviderName>
+  <ProviderName>Confirm4Me</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Email Risk Advisor"/>
-  <Description DefaultValue="A tool to safely navigate emails"/>
-  <IconUrl DefaultValue="https://emailassistantalpha.azurewebsites.net/assets/email-icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://emailassistantalpha.azurewebsites.net/assets/email-icon-32.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <DisplayName DefaultValue="EmailAssistant UAT"/>
+  <Description DefaultValue="Email Security Tool that brings information about the email to the user"/>
+  <IconUrl DefaultValue="https://confirm4medev.net/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://confirm4medev.net/assets/icon-32.png"/>
+  <SupportUrl DefaultValue="https://www.confirm4me.com/help"/>
   <AppDomains>
     <AppDomain>https://outlook.office.com</AppDomain>
   </AppDomains>
@@ -29,7 +29,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://emailassistantalpha.azurewebsites.net/taskpane.html"/>
+        <SourceLocation DefaultValue="https://confirm4medev.net/taskpane.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -79,19 +79,19 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://emailassistantalpha.azurewebsites.net/assets/email-icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://emailassistantalpha.azurewebsites.net/assets/email-icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://emailassistantalpha.azurewebsites.net/assets/email-icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://confirm4medev.net/assets/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://confirm4medev.net/assets/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://confirm4medev.net/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://emailassistantalpha.azurewebsites.net/taskpane.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://confirm4medev.net/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="Confirm4Me"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Email Risk Advisor"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Email Risk Advisor - UAT"/>
       </bt:ShortStrings>  
       <bt:LongStrings>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens a pane displaying all available properties."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens a pane displaying the safety of email."/>
       </bt:LongStrings>
     </Resources>  
 
@@ -134,21 +134,33 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://emailassistantalpha.azurewebsites.net/assets/email-icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://emailassistantalpha.azurewebsites.net/assets/email-icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://emailassistantalpha.azurewebsites.net/assets/email-icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://confirm4medev.net/assets/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://confirm4medev.net/assets/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://confirm4medev.net/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://emailassistantalpha.azurewebsites.net/taskpane.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://confirm4medev.net/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="Confirm4Me"/>
         <bt:String id="TaskpaneButton.Label" DefaultValue="Email Risk Advisor"/>
       </bt:ShortStrings>  
       <bt:LongStrings>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens a pane displaying all available properties."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens a pane displaying the safety of the email."/>
       </bt:LongStrings>
     </Resources> 
+    
+    <WebApplicationInfo>
+		<Id>b6f45c0a-6b64-4465-a764-e0bc351d7e1e</Id>
+		<Resource>api://confirm4medev.net/b6f45c0a-6b64-4465-a764-e0bc351d7e1e</Resource>
+		<Scopes>
+		<Scope>profile</Scope>
+			<Scope>profile</Scope>
+			<Scope>User.Read</Scope>
+			<Scope>Mail.ReadWrite</Scope>
+		</Scopes>
+	</WebApplicationInfo>
+
     </VersionOverrides>
   </VersionOverrides>
 </OfficeApp>
