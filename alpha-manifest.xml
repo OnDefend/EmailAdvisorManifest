@@ -6,15 +6,15 @@
         xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" 
         xsi:type="MailApp">
         
-  <Id>77fda4fa-2756-4f50-aa77-88ecf8e54c8b</Id>
+  <Id>03aafe5f-a4f7-45b2-adf8-bf4c6e74bc2e</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Confirm4Me</ProviderName>
+  <ProviderName>Ondefend</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="EmailAssistant UAT"/>
-  <Description DefaultValue="Email Security Tool that brings information about the email to the user"/>
-  <IconUrl DefaultValue="https://confirm4medev.net/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://confirm4medev.net/assets/icon-32.png"/>
-  <SupportUrl DefaultValue="https://www.confirm4me.com/help"/>
+  <DisplayName DefaultValue="Confirm4Me Email Risk Advisor"/>
+  <Description DefaultValue="A tool to safely navigate emails"/>
+  <IconUrl DefaultValue="https://confirm4me.net/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://confirm4me.net/assets/icon-32.png"/>
+  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
   <AppDomains>
     <AppDomain>https://outlook.office.com</AppDomain>
   </AppDomains>
@@ -23,13 +23,13 @@
   </Hosts>
   <Requirements>
     <Sets>
-      <Set Name="Mailbox" MinVersion="1.1"/>
+      <Set Name="Mailbox" MinVersion="1.6"/>
     </Sets>
   </Requirements>
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://confirm4medev.net/taskpane.html"/>
+        <SourceLocation DefaultValue="https://confirm4me.net/taskpane.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -43,7 +43,7 @@
 
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
     <Requirements>
-      <bt:Sets DefaultMinVersion="1.3">
+      <bt:Sets DefaultMinVersion="1.6">
         <bt:Set Name="Mailbox"/>
       </bt:Sets>
     </Requirements>
@@ -79,25 +79,25 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://confirm4medev.net/assets/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://confirm4medev.net/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://confirm4medev.net/assets/icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://confirm4me.net/assets/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://confirm4me.net/assets/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://confirm4me.net/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://confirm4medev.net/taskpane.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://confirm4me.net/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="Confirm4Me"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Email Risk Advisor - UAT"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Email Risk Advisor"/>
       </bt:ShortStrings>  
       <bt:LongStrings>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens a pane displaying the safety of email."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens a pane displaying email risk."/>
       </bt:LongStrings>
     </Resources>  
 
     <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
         <Requirements>
-      <bt:Sets DefaultMinVersion="1.3">
+      <bt:Sets DefaultMinVersion="1.6">
         <bt:Set Name="Mailbox"/>
       </bt:Sets>
     </Requirements>
@@ -134,27 +134,28 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://confirm4medev.net/assets/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://confirm4medev.net/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://confirm4medev.net/assets/icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://confirm4me.net/assets/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://confirm4me.net/assets/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://confirm4me.net/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://confirm4medev.net/taskpane.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://confirm4me.net/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="Confirm4Me"/>
         <bt:String id="TaskpaneButton.Label" DefaultValue="Email Risk Advisor"/>
       </bt:ShortStrings>  
       <bt:LongStrings>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens a pane displaying the safety of the email."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens a pane displaying email risk."/>
       </bt:LongStrings>
     </Resources> 
     
     <WebApplicationInfo>
-		<Id>b6f45c0a-6b64-4465-a764-e0bc351d7e1e</Id>
-		<Resource>api://confirm4medev.net/b6f45c0a-6b64-4465-a764-e0bc351d7e1e</Resource>
+		<Id>c184c6dc-e35f-46a6-a901-5e9d48ecd724</Id>
+		<Resource>api://confirm4me.net/c184c6dc-e35f-46a6-a901-5e9d48ecd724</Resource>
 		<Scopes>
 		<Scope>profile</Scope>
+      <Scope>openid</Scope>
 			<Scope>profile</Scope>
 			<Scope>User.Read</Scope>
 			<Scope>Mail.ReadWrite</Scope>
